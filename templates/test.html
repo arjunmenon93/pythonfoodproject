@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>{{t}}</h1>
+    <h1> total price:{{tr}}</h1>
+    <h1>total count:{{cn}}</h1>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+          {% for i in ci %}
+            <div class="col">
+              <a href="#" style="text-decoration: none;">
+                <div class="card  p-3 " style="width: 18rem;">
+                  <img src="{{i.prdt.img.url}}" height="300px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{i.prdt.name}}</h5>
+                    <p class="card-text">{{i.prdt.desc}}</p>
+                    <p class="card-text"> stock: {{i.prdt.stock}}</p>
+                    <p class="card-text"> price: {{i.prdt.price}} Rs</p>
+                    <p class="card-text"> quantity: {{i.quantity}} </p>
+                    
+                  </div>
+                </div>
+  
+              </a>
+               
+            </div>
+            {% endfor %}
+            
+           
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>
